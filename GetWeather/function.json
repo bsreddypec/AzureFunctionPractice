@@ -1,17 +1,16 @@
-echo "{
-    \"bindings\": [
-      {
-        \"authLevel\": \"function\",
-        \"type\": \"httpTrigger\",
-        \"direction\": \"in\",
-        \"name\": \"req\",
-        \"methods\": [ \"get\", \"post\" ]
-      },
-      {
-        \"type\": \"http\",
-        \"direction\": \"out\",
-        \"name\": \"res\"
-      }
-    ]
-  }" > AzureFunctionPractice/GetWeather/function.json
-  
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "route": "GetWeather"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
